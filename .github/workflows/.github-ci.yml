@@ -31,11 +31,11 @@ jobs:
       run: cmake --build . --config $BUILD_TYPE --target all
 
     - name: Test
-      working-directory: ${{runner.workspace}}
+      working-directory: ${{runner.workspace}}/build
       shell: bash
-      run: cd $GITHUB_WORKSPACE/build/ && $RUNNER_WORKSPACE/build/ring_buf_test
+      run: ./ring_buf_test
 
     - name: Benchmark
-      working-directory: ${{runner.workspace}}
+      working-directory: ${{runner.workspace}}/build
       shell: bash
-      run: cd $GITHUB_WORKSPACE/build/ && $RUNNER_WORKSPACE/build/ring_buf_bench
+      run: ./ring_buf_bench
