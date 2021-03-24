@@ -1,9 +1,6 @@
 #include <memory>
 #include <deque>
 #include <random>
-#include <boost/circular_buffer.hpp>
-#include <boost/pool/object_pool.hpp>
-#include <boost/intrusive_ptr.hpp>
 #include <benchmark/benchmark.h>
 #include "ring_buffer.h"
 
